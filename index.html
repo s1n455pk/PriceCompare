@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PriceCompare | Compare Prices & Save Money</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= LOADER ================= -->
+
+  <div id="loader">
+
+    <div class="loader-box">
+
+      <div class="loader-circle"></div>
+
+      <h2>Price<span>Compare</span></h2>
+
+      <p>Loading...</p>
+
+    </div>
+
+  </div>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <header class="navbar">
+
+    <div class="container nav-container">
+
+      <a href="#" class="logo">
+
+        Price<span>Compare</span>
+
+      </a>
+
+      <nav>
+
+        <ul class="menu" id="menu">
+
+          <li><a href="#home">Home</a></li>
+
+          <li><a href="#categories">Categories</a></li>
+
+          <li><a href="#comparison">Compare</a></li>
+
+          <li><a href="#features">Features</a></li>
+
+          <!-- <li><a href="#testimonials">Reviews</a></li> -->
+
+          <li><a href="#faq">FAQ</a></li>
+
+          <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+      </nav>
+
+      <div class="nav-actions">
+
+        <button id="themeBtn">
+
+          <i class="fa-solid fa-moon"></i>
+
+        </button>
+
+        <button class="menu-toggle" id="menuToggle">
+
+          <span></span>
+
+          <span></span>
+
+          <span></span>
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero" id="home">
+
+    <div class="container hero-flex">
+
+      <div class="hero-left">
+
+        <span class="hero-tag">
+
+          🔥 India's Smartest Price Comparison Platform
+
+        </span>
+
+        <h1>
+
+          Compare Prices
+
+          <br>
+
+          Across
+
+          <span id="typing"></span>
+
+        </h1>
+
+        <p>
+
+          Search any product and instantly compare prices from multiple
+          online stores. Save money before every purchase.
+
+        </p>
+
+        <div class="search-box">
+
+          <i class="fa-solid fa-magnifying-glass"></i>
+
+          <input type="text"
+            id="searchInput"
+            placeholder="Search any product to compare prices...">
+
+          <button id="searchBtn">
+
+            Compare Now
+
+          </button>
+
+        </div>
+
+        <div class="hero-buttons">
+
+          <!-- <a href="#comparison" class="btn primary-btn">
+
+            Compare Now
+
+          </a> -->
+
+          <a href="#categories" class="btn secondary-btn">
+
+            Explore
+
+          </a>
+
+        </div>
+
+        <div class="hero-users">
+
+          <div class="avatars">
+
+            <img src="https://i.pravatar.cc/50?img=10ZZZ">
+
+            <img src="https://i.pravatar.cc/50?img=12ZZZ">
+
+            <img src="https://i.pravatar.cc/50?img=16ZZZ">
+
+            <img src="https://i.pravatar.cc/50?img=20ZZZ">
+
+          </div>
+
+          <span>
+
+            Trusted by 0+ shoppers
+
+          </span>
+
+        </div>
+
+      </div>
+
+      <div class="hero-right">
+
+        <img src="images/hero.svg" alt="Shopping Illustration">
+
+      </div>
+
+    </div>
+
+    <div class="floating circle1"></div>
+
+    <div class="floating circle2"></div>
+
+    <div class="floating circle3"></div>
+
+  </section>
+
+  <!-- ================= STATS ================= -->
+
+  <!-- <section class="stats">
+
+    <div class="container stats-grid">
+
+      <div class="stat-card">
+
+        <h2 class="counter" data-target="10000">0</h2>
+
+        <p>Products</p>
+
+      </div>
+
+      <div class="stat-card">
+
+        <h2 class="counter" data-target="150">0</h2>
+
+        <p>Partner Stores</p>
+
+      </div>
+
+      <div class="stat-card">
+
+        <h2 class="counter" data-target="50000">0</h2>
+
+        <p>Happy Users</p>
+
+      </div>
+
+      <div class="stat-card">
+
+        <h2 class="counter" data-target="25">0</h2>
+
+        <p>Lakh Saved</p>
+
+      </div>
+
+    </div>
+
+  </section> -->
+
+
+  <section class="stats">
+
+  <div class="container stats-grid">
+
+    <!-- Products -->
+    <div class="stat-card">
+
+      <div class="stat-icon">
+        <i class="fa-solid fa-box"></i>
+      </div>
+
+      <h2 class="counter" data-target="10000">0</h2>
+
+      <p>Products</p>
+
+    </div>
+
+    <!-- Partner Stores -->
+    <div class="stat-card">
+
+      <div class="stat-icon">
+        <i class="fa-solid fa-store"></i>
+      </div>
+
+      <h2 class="counter" data-target="150">0</h2>
+
+      <p>Partner Stores</p>
+
+    </div>
+
+    <!-- Happy Users -->
+    <div class="stat-card">
+
+      <div class="stat-icon">
+        <i class="fa-solid fa-users"></i>
+      </div>
+
+      <h2 class="counter" data-target="50000">0</h2>
+
+      <p>Happy Users</p>
+
+    </div>
+
+    <!-- Money Saved -->
+    <div class="stat-card">
+
+      <div class="stat-icon">
+        <i class="fa-solid fa-indian-rupee-sign"></i>
+      </div>
+
+      <h2 class="counter" data-target="25">0</h2>
+
+      <p>Lakh Saved</p>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- ================= CATEGORIES ================= -->
+
+  <!-- <section class="categories" id="categories">
+
+    <div class="container">
+
+      <h2 class="section-title">
+
+        Popular Categories
+
+      </h2>
+
+      <p class="section-subtitle">
+
+        Find the best deals across every category.
+
+      </p>
+
+      <div class="category-grid">
+
+        <div class="category-card">
+
+          <i class="fa-solid fa-mobile-screen"></i>
+
+          <h3>Mobiles</h3>
+
+        </div>
+
+        <div class="category-card">
+
+          <i class="fa-solid fa-laptop"></i>
+
+          <h3>Laptops</h3>
+
+        </div>
+
+        <div class="category-card">
+
+          <i class="fa-solid fa-headphones"></i>
+
+          <h3>Headphones</h3>
+
+        </div>
+
+        <div class="category-card">
+
+          <i class="fa-solid fa-tv"></i>
+
+          <h3>Electronics</h3>
+
+        </div>
+
+        <div class="category-card">
+
+          <i class="fa-solid fa-shirt"></i>
+
+          <h3>Fashion</h3>
+
+        </div>
+
+        <div class="category-card">
+
+          <i class="fa-solid fa-house"></i>
+
+          <h3>Home</h3>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section> -->
+
+
+  <section class="categories" id="categories">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      Popular Categories
+    </h2>
+
+    <p class="section-subtitle">
+      Find the best deals across every category.
+    </p>
+
+    <div class="category-grid">
+
+      <!-- Mobile -->
+      <div class="category-card">
+
+        <img src="images/categories/mobile.png" alt="Mobiles">
+
+        <h3>Mobiles</h3>
+
+      </div>
+
+      <!-- Laptop -->
+      <div class="category-card">
+
+        <img src="images/categories/laptop.png" alt="Laptops">
+
+        <h3>Laptops</h3>
+
+      </div>
+
+      <!-- Headphones -->
+      <div class="category-card">
+
+        <img src="images/categories/headphone.png" alt="Headphones">
+
+        <h3>Headphones</h3>
+
+      </div>
+
+      <!-- TV -->
+      <div class="category-card">
+
+        <img src="images/categories/tv.png" alt="Electronics">
+
+        <h3>Electronics</h3>
+
+      </div>
+
+      <!-- Smart Watch -->
+      <div class="category-card">
+
+        <img src="images/categories/smart-watch.png" alt="Smart Watch">
+
+        <h3>Smart Watch</h3>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- Continue... -->
+
+  <!-- ================= PRODUCT COMPARISON ================= -->
+
+  <section class="comparison" id="comparison">
+
+    <div class="container">
+
+      <h2 class="section-title">
+
+        Compare Prices Instantly
+
+      </h2>
+
+      <p class="section-subtitle">
+
+        Find the lowest price from trusted online stores.
+
+      </p>
+
+      <div class="table-wrapper">
+
+        <table class="compare-table">
+
+          <thead>
+
+            <tr>
+
+              <th>Image</th>
+
+              <th>Product</th>
+
+              <th>Store</th>
+
+              <th>Price</th>
+
+              <th>Rating</th>
+
+              <th>Delivery</th>
+
+              <th>Action</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody id="productTableBody">
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= FEATURES ================= -->
+
+  <!-- <section class="features" id="features">
+
+    <div class="container">
+      <h2 class="section-title">
+        Why Choose PriceCompare?
+      </h2>
+      <p class="section-subtitle">
+        Everything you need before buying online.
+      </p>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa-solid fa-tags"></i>
+          </div>
+          <h3>Best Prices</h3>
+          <p>
+            Compare prices from multiple websites in seconds.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h3>Fast Search</h3>
+          <p>
+            Search thousands of products instantly.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3>Trusted Stores</h3>
+          <p>
+            Buy only from verified online marketplaces.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+          <h3>Save Money</h3>
+          <p>
+            Never overpay again with smart price comparison.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+  <section class="features" id="features">
+
+  <div class="container about-container">
+
+    <!-- Left Side SVG -->
+    <div class="about-image">
+      <img src="images/about.svg" alt="About PriceCompare">
+    </div>
+
+    <!-- Right Side Content -->
+    <div class="about-content">
+
+      <h2 class="section-title">
+        Why Choose PriceCompare?
+      </h2>
+
+      <p class="section-subtitle">
+        Everything you need before buying online.
+      </p>
+
+      <div class="feature-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa-solid fa-tags"></i>
+          </div>
+          <h3>Best Prices</h3>
+          <p>
+            Compare prices from multiple websites in seconds.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h3>Fast Search</h3>
+          <p>
+            Search thousands of products instantly.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3>Trusted Stores</h3>
+          <p>
+            Buy only from verified online marketplaces.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+          <h3>Save Money</h3>
+          <p>
+            Never overpay again with smart price comparison.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  </section>
+
+  <!-- ================= TESTIMONIALS ================= -->
+
+ <!--  <section class="testimonials" id="testimonials">
+
+    <div class="container">
+
+      <h2 class="section-title">
+
+        What Users Say
+
+      </h2>
+
+      <div class="testimonial-grid">
+
+        <div class="testimonial-card">
+
+          <img src="https://i.pravatar.cc/100?img=15">
+
+          <h3>Rahul Sharma</h3>
+
+          <div class="stars">
+
+            ⭐⭐⭐⭐⭐
+
+          </div>
+
+          <p>
+
+            Saved ₹2500 while buying my smartphone.
+
+          </p>
+
+        </div>
+
+        <div class="testimonial-card">
+
+          <img src="https://i.pravatar.cc/100?img=18">
+
+          <h3>Priya Verma</h3>
+
+          <div class="stars">
+
+            ⭐⭐⭐⭐⭐
+
+          </div>
+
+          <p>
+
+            Very useful website. I compare every product before shopping.
+
+          </p>
+
+        </div>
+
+        <div class="testimonial-card">
+
+          <img src="https://i.pravatar.cc/100?img=24">
+
+          <h3>Aman Gupta</h3>
+
+          <div class="stars">
+
+            ⭐⭐⭐⭐☆
+
+          </div>
+
+          <p>
+
+            Clean design and easy to use.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+-->
+  <!-- ================= FAQ ================= -->
+
+  <section class="faq" id="faq">
+
+    <div class="container">
+
+      <h2 class="section-title">
+
+        Frequently Asked Questions
+
+      </h2>
+
+      <div class="faq-box">
+
+        <div class="faq-item">
+
+          <button class="faq-question">
+
+            Is PriceCompare free?
+
+          </button>
+
+          <div class="faq-answer">
+
+            Yes, PriceCompare is completely free for everyone.
+
+          </div>
+
+        </div>
+
+        <div class="faq-item">
+
+          <button class="faq-question">
+
+            Which stores are supported?
+
+          </button>
+
+          <div class="faq-answer">
+
+            Amazon, Flipkart, Croma, Reliance Digital and many more.
+
+          </div>
+
+        </div>
+
+        <div class="faq-item">
+
+          <button class="faq-question">
+
+            How do you find the best deal?
+
+          </button>
+
+          <div class="faq-answer">
+
+            We compare prices from different stores and highlight the cheapest one.
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= NEWSLETTER ================= -->
+
+  <section class="newsletter">
+
+    <div class="container">
+
+      <div class="newsletter-box">
+
+        <h2>
+
+          Never Miss a Deal
+
+        </h2>
+
+        <p>
+
+          Subscribe and get notified about the latest discounts.
+
+        </p>
+
+        <div class="newsletter-form">
+
+          <input type="email" placeholder="Enter your email">
+
+          <button>
+
+            Subscribe
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="footer" id="contact">
+
+    <div class="container footer-grid">
+
+      <!-- Logo -->
+
+      <div class="footer-box">
+
+        <h2 class="logo">
+
+          Price<span>Compare</span>
+
+        </h2>
+
+        <p>
+          Compare prices from multiple shopping websites and save money on every purchase.
+        </p>
+
+        <div class="social-icons">
+
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+          <a href="#"><i class="fab fa-instagram"></i></a>
+
+          <a href="#"><i class="fab fa-twitter"></i></a>
+
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+          <a href="#"><i class="fab fa-github"></i></a>
+
+        </div>
+
+      </div>
+
+      <!-- Quick Links -->
+
+      <div class="footer-box">
+
+        <h3>Quick Links</h3>
+
+        <ul>
+
+          <li><a href="#home">Home</a></li>
+
+          <li><a href="#categories">Categories</a></li>
+
+          <li><a href="#comparison">Compare</a></li>
+
+          <li><a href="#features">Features</a></li>
+
+          <li><a href="#faq">FAQ</a></li>
+
+        </ul>
+
+      </div>
+
+      <!-- Support -->
+
+      <div class="footer-box">
+
+        <h3>Support</h3>
+
+        <ul>
+
+          <li><a href="#">Privacy Policy</a></li>
+
+          <li><a href="#">Terms & Conditions</a></li>
+
+          <li><a href="#">Help Center</a></li>
+
+          <li><a href="#">Contact Us</a></li>
+
+        </ul>
+
+      </div>
+
+      <!-- Contact -->
+
+      <div class="footer-box">
+
+        <h3>Contact</h3>
+
+        <p>
+
+          <i class="fa-solid fa-location-dot"></i>
+
+          Gwalior, Madhya Pradesh , India
+
+        </p>
+
+        <p>
+
+          <i class="fa-solid fa-envelope"></i>
+
+          coming soon...
+
+        </p>
+
+        <p>
+
+          <i class="fa-solid fa-phone"></i>
+
+          Support Available Soon
+
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      © <span id="year"></span>
+
+      PriceCompare. All Rights Reserved.
+
+      <br>Designed & Developed by Sandeep Khare
+
+    </div>
+
+  </footer>
+
+  <!-- ================= SCROLL TO TOP ================= -->
+
+  <button id="scrollTop">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+  </button>
+
+  <!-- ================= SCRIPTS ================= -->
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
